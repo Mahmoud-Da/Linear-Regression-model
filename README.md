@@ -61,7 +61,8 @@ python3 inference.py
 - Make predictions on the test data (or new data if modified).
 - Plot the predictions.
 
-#### Result
-- ![Screenshot 2025-05-19 at 20 48 22](https://github.com/user-attachments/assets/354a13db-e51f-4258-8673-e0f9954e746c)
+---
+
+**⚠️ Use code with caution in production environments.**
 
 ---

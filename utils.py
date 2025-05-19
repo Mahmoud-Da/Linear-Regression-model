@@ -1,4 +1,3 @@
-# utils.py
 import matplotlib.pyplot as plt
 import torch  # For .cpu().numpy() if tensors are on GPU
 

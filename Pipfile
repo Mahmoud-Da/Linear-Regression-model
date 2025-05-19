@@ -1,0 +1,20 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[[source]]
+name = "pytorch-cu111"
+url = "https://download.pytorch.org/whl/cu111"
+verify_ssl = true
+
+[packages]
+torch = "2.7.0"
+torchvision = "0.22.0"
+torchaudio = "2.7.0"
+matplotlib = "3.10.3"
+
+[dev-packages]
+
+[requires]
+python_version = "3.13"

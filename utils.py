@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import torch  # For .cpu().numpy() if tensors are on GPU
+from datetime import datetime
 
 
 def plot_predictions(train_data=None,
@@ -43,4 +44,20 @@ def plot_predictions(train_data=None,
 
     # Show the legend
     plt.legend(prop={"size": 14})
-    plt.show()  # Add this to display the plot when run as a script
+
+    # plt.show()  # Add this to display the plot when run as a script without docker
+
+    # Get the current date and time
+    now = datetime.now()
+
+    # Format the date and time into a string suitable for a filename
+    # Example format: YYYY-MM-DD_HH-MM-SS
+    # You can customize this format as needed.
+    # See https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes
+    timestamp_str = now.strftime("%Y-%m-%d_%H-%M-%S")
+    plot_filename = f"result_{timestamp_str}.png"  # Or .pdf, .jpg, etc.
+    plt.savefig(plot_filename)
+    print(f"Plot saved to {plot_filename}")
+
+    # close the plot figure to free up memory, especially in scripts
+    plt.close()

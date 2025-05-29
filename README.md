@@ -98,8 +98,6 @@ git clone <your-repository-url>
 cd <your-project-directory>
 ```
 
-````
-
 ### Step 2: Check/Generate Pipfile.lock
 
 The `Dockerfile` uses `pipenv install --deploy`, which requires `Pipfile.lock` to be up-to-date with `Pipfile`.
@@ -195,4 +193,3 @@ docker-compose down -v
   - To remove unused Docker networks: `docker network prune`
   - To remove all unused Docker resources (images, containers, volumes, networks): `docker system prune -a` (Use with caution!)
 
-````
